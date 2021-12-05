@@ -1,0 +1,3 @@
+[1011/165610.101:ERROR:settings.cc(430)] Settings version is not 5
+[1011/170610.115:ERROR:directory_reader_win.cc(43)] FindFirstFile: Das System kann den angegebenen Pfad nicht finden. (0x3)
+[1012/175643.585:ERROR:directory_reader_win.cc(43)] FindFirstFile: Das System kann den angegebenen Pfad nicht finden. (0x3)

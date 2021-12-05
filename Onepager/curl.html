@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JS http Lesen </title>
+<div id="result"></div>
+<script>
+$.ajax({
+type: "POST",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+url: "https://www.bitstamp.net/api/v2/ticker/ltceur",
+success: function (data) {
+var res = $("#result");
+var html = "<p><b>Litecoin</b></p>";
+var Zeit = new Date();
+Zeit.setTime(data.timestamp * 1000);
+html += "<p>Datum: " + Zeit + "</p>";
+
+html += "<p>Verkaufspreis: " + data.ask + "€</p>";
+
+var ergebnis = parseFloat(data.ask);
+html += "<p>Verkaufspreis + 3,01 €: " + ergebnis + "€</p>";
+res.html(html);
+}
+});
+</script>
+  </head>
+  <body>
+  <p>Da ist was Schief gegangen</p>
+  </body>
+</html>
